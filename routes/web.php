@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    /*
     $user = \App\Models\User::first();
 
     $post = $user->posts()->create([
@@ -21,7 +22,7 @@ Route::get('/', function () {
         'body' => 'lorem ipsum'
     ]);
 
-    $post->tags()->attach(1);
+    $post->tags()->attach(1); */
 
     return view('welcome');
 });
