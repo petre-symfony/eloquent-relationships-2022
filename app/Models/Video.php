@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model {
     use HasFactory;
 
-    public function series(){
-        return $this->belongsTo(Series::class);
+    public function watchable(){
+        return $this->morphTo();
     }
 }
