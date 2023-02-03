@@ -13,7 +13,7 @@ return new class extends Migration {
     public function up() {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('post_id');
+            $table->unsignedInteger('post_id')->index();
             $table->text('body');
             $table->timestamps();
         });
