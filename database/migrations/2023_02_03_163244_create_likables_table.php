@@ -11,10 +11,11 @@ return new class extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('post_user', function (Blueprint $table) {
-            $table->primary(['post_id', 'user_id']);
-            $table->unsignedBigInteger('post_id');
+        Schema::create('likables', function (Blueprint $table) {
+            $table->primary(['likable_id', 'user_id', 'likable_type']);
+            $table->unsignedBigInteger('likable_id');
             $table->unsignedBigInteger('user_id');
+            $table->string('likable_type');
             $table->timestamps();
         });
     }

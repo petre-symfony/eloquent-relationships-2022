@@ -25,6 +25,6 @@ class Post extends Model {
     }
 
     public function likes() {
-        return $this->belongsToMany(User::class)->withTimestamps();
+        return $this->morphToMany(User::class, 'likable')->withTimestamps();
     }
 }
